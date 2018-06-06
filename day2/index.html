@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+    <style>
+
+        .main-container{
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        .toolbar{
+            width: 100%;
+            height: 64px;
+            background-color: purple;
+            padding-top: 22px;
+            padding-right: 16px;
+            box-sizing: border-box;
+        }
+
+        .image-container{
+            width: 100%;
+            height: calc(100vh - 64px);
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        .image-container img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav{
+            text-align: right;
+        }
+
+        .nav li{
+            font-family: "Arial Narrow";
+            width: 100px;
+            color: #ffc897;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .nav li:hover{
+            color: #ffffff;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="toolbar">
+
+            <ul class="nav">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Email</li>
+            </ul>
+
+        </div>
+
+        <div class="image-container">
+            <img src="https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/asia-pacific/singapore/singapore/new-images/05_KLK%20Photography_Ritz%20Carlton%202016.png?$XlargeViewport100pct$" alt="">
+        </div>
+    </div>
+</body>
+</html>

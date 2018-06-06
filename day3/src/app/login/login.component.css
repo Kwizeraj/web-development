@@ -1,0 +1,29 @@
+.login-container{
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: aliceblue;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.login-title{
+  height: 50px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.login-container input{
+  width: 500px;
+  height: 50px;
+  display: block;
+  margin: 20px auto;
+}
+
+.login-button{
+  display: block;
+  width: 500px;
+  height: 50px;
+  background-color: blueviolet;
+  color: white;
+  margin: 20px auto;
+}
