@@ -27,3 +27,8 @@
   color: white;
   margin: 20px auto;
 }
+
+.message{
+  text-align: center;
+  font-size: 20px;
+}

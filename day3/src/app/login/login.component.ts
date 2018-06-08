@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {LoginService} from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent {
 
-  public email = '';
-  public password = '';
+  public email = 'praven@live.com';
+  public password = 'password';
+
+  public message = '';
+
+  public constructor(private loginService: LoginService) {}
 
 
   public login() {
 
-    if (this.email === 'praven2010@live.com' && this.password === 'praven') {
-      alert('Login successfully');
-    } else {
-      alert('Please check your email or password');
-    }
+    this.message = 'Loading...';
+
+    this.loginService.authenticate(this.email, this.password).subscribe(
+      (value) => {
+        if (value) {
+          this.message = 'Login successfull';
+        } else {
+          this.message = 'Login failed';
+        }
+      },
+      (error) => {
+        this.message = 'Internal error...';
+        console.log(error);
+      }
+    );
   }
 }
